@@ -12,5 +12,22 @@ jobs:
         run: |
           node -v
           npm -v
+      
+      - name: python-commands
+        shell: python   # defining that the command to run in python shell
+        run: |
+          import platform
+          print(platform.processor())
+  
+  run-windows-commands:
+    runs-on: windows-latest
+    needs: [run-shell-commands]
+    steps:
+      - name: getting directory location
+        run: Get-Location
+
+      - name: get directory location(using bash)
+        run: pwd
+        shell: bash
 
 # EOF 
