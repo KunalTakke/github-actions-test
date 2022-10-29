@@ -19,5 +19,5 @@ jobs:
   third-action:
    runs-on: ubuntu-latest
    steps:
-    - name: tg
+    - name: test 3
       run: ls -a

@@ -1,1 +1,17 @@
-name: actions 
+name: Actions-steps
+
+on: push
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: simple Js Actions
+        id: greet
+        uses: actions/hello-world-javascript-action
+        with:
+          who-to-greet: Master Kunal !   # with "with" tag we can provide inputs to predefined action variable
+      
+      - name: using Js Actions outputs
+        run: ${{steps.greet.outputs.time }}
+      
