@@ -1,6 +1,9 @@
 name: Actions-steps
 
-on: [push,pull_request]  # also defining for a pull request
+on: 
+  push:
+  pull_request:
+    types: [closed,assigned,opened,reopened]  # added activity types
 
 jobs:
   run-github-actions:
