@@ -1,6 +1,6 @@
 name: Actions-steps
 
-on: push
+on: [push,pull_request]  # also defining for a pull request
 
 jobs:
   run-github-actions:
@@ -26,7 +26,7 @@ jobs:
 
       - name: using checkout
         uses: actions/checkout@v2
-        
+
       - name: lisiting files after checkout
         run: |
           pwd
