@@ -14,4 +14,21 @@ jobs:
       
       - name: using Js Actions outputs
         run: echo "${{ steps.greet.outputs.time }}"
+
+      - name: list files before checkout
+        run: | 
+          pwd
+          ls
+          echo $GITHUB_REPOSITORY     
+          echo $GITHUB_SHA 
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          
+      - name: using checkout
+        uses: actions/checkout@v2
+        run: |
+          pwd
+          ls
+
+
       
