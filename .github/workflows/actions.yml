@@ -23,9 +23,11 @@ jobs:
           echo $GITHUB_SHA 
           echo $GITHUB_WORKSPACE
           echo "${{ github.token }}"
-          
+
       - name: using checkout
         uses: actions/checkout@v2
+        
+      - name: lisiting files after checkout
         run: |
           pwd
           ls
