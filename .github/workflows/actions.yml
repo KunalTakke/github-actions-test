@@ -13,5 +13,5 @@ jobs:
           who-to-greet: Master Kunal !   # with "with" tag we can provide inputs to predefined action variable
       
       - name: using Js Actions outputs
-        run: ${{steps.greet.outputs.time }}
+        run: echo "${{ steps.greet.outputs.time }}"
       
