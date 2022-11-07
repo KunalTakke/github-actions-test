@@ -5,6 +5,8 @@ on: [push]
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
+    environment:
+      name: devEnvironment
     steps:
       - name: echo a string
         run: echo "Hello World !"
