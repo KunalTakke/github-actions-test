@@ -24,6 +24,8 @@ jobs:
   run-windows-commands:
     runs-on: windows-latest
     needs: [run-shell-commands]
+    environment:
+      name: prodEnvironment
     steps:
       - name: getting directory location
         run: Get-Location
