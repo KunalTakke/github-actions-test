@@ -20,6 +20,16 @@ jobs:
         run: |
           import platform
           print(platform.processor())
+
+  run-simple-commands:
+    runs-on: ubuntu-latest
+    needs: [run-shell-commands]
+    environment:
+      name: devEnvironment
+    steps:
+      - name: demo 
+        run: echo "Demo run successful"
+       
   
   run-windows-commands:
     runs-on: windows-latest
