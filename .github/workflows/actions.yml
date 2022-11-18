@@ -34,6 +34,8 @@ jobs:
         run: |
           pwd
           ls
-
+          
+      - name: Trigger another workflow
+        uses: ./KunalTakke/github-actions-test/edit/master/.github/workflows/simple.yml
 
       
