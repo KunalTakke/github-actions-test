@@ -39,6 +39,6 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Trigger another workflow
-        uses: ./KunalTakke/github-actions-test/blob/master/.github/workflows/simple.yml
+        uses: ./KunalTakke/github-actions-test/tree/master/.github/workflows/simple.yml
 
       
