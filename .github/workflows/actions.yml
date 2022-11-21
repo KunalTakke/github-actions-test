@@ -9,7 +9,6 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./simple.yml
+      - uses: ./.github/workflows/simple.yml
 
       
