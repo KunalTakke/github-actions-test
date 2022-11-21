@@ -1,4 +1,4 @@
-name: Actions-steps
+name: Actions
 
 on: 
   push:
