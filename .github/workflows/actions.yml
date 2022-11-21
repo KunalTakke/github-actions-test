@@ -1,7 +1,7 @@
 name: Actions
 
 on: 
-  workflow_dispatch:  
+  push:  
 
 jobs:
   run-github-actions:
