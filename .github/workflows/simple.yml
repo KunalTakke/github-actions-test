@@ -1,6 +1,6 @@
 name: shell commands
 
-on: [push] 
+on: [workflow_call] 
 
 jobs:
   run-shell-commands:
