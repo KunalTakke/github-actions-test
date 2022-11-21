@@ -8,40 +8,8 @@ jobs:
     environment:
       name: devEnvironment
     steps:
-      - name: echo a string
-        run: echo "Hello World !"
-      - name: multiline script
-        run: |
-          node -v
-          npm -v
+      - name: Called Workflow
+        run: echo "Reused Workflow !"
       
-      - name: python-commands
-        shell: python   # defining that the command to run in python shell
-        run: |
-          import platform
-          print(platform.processor())
-
-  run-simple-commands:
-    runs-on: ubuntu-latest
-    needs: [run-shell-commands]
-    environment:
-      name: devEnvironment
-    steps:
-      - name: demo 
-        run: echo "Demo run successful"
-       
-  
-  run-windows-commands:
-    runs-on: windows-latest
-    needs: [run-shell-commands]
-    environment:
-      name: prodEnvironment
-    steps:
-      - name: getting directory location
-        run: Get-Location
-
-      - name: get directory location(using bash)
-        run: pwd
-        shell: bash
 
 # EOF 
