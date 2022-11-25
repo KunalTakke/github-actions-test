@@ -1,0 +1,28 @@
+name: Hello World
+
+on:
+  push:
+    branches: [develop,master]
+
+jobs:
+  first-action:
+    runs-on: ubuntu-latest
+    if: ${{github.ref == "develop"}}
+    environment:
+      name: devEnvironment
+    steps:
+      - name: first command
+        run: echo "Hii Master Kunal !"
+  
+  second-action:
+  runs-on: ubuntu-latest
+  if: ${{github.ref == "master"}}
+  steps:
+    - name: test 2
+      run: pwd
+  
+  third-action:
+   runs-on: ubuntu-latest
+   steps:
+    - name: test 3
+      run: ls -a
